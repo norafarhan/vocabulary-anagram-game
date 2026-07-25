@@ -1,4 +1,4 @@
-# proj3-JSA
+
 Vocabulary anagrams game for primary school English language learners (ELL)
 
 ## Overview
