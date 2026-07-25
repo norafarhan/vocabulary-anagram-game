@@ -1,103 +1,49 @@
-# Vocabulary Anagram Game
+# proj3-JSA
+Vocabulary anagrams game for primary school English language learners (ELL)
 
-An interactive vocabulary game built with Flask and AJAX that helps English language learners practice vocabulary by forming words from a randomized letter jumble. The application validates guesses in real time without requiring page reloads, creating a more responsive user experience.
+## Overview
 
----
+A simple anagram game designed for English-language learning students in elementary and middle school. Students are presented with a list of vocabulary words (taken from a text file) and an anagram. The anagram is a jumble of some number of vocabulary words, randomly chosen. Students attempt to type words that can be created from the jumble. When a matching word is typed, it is added to a list of solved words. 
 
-## Table of Contents
+The vocabulary word list is fixed for one invocation of the server, so multiple students connected to the same server will see the same vocabulary list but may  have different anagrams.
 
-- Features
-- How It Works
-- Why I Built It
-- Tech Stack
-- Installation
-- Usage
-- Future Improvements
+## Authors 
 
----
+Initial version by M Young; Docker version added by R Durairajan; to be revised by CIS 322 students. 
 
-## Features
+## Status
 
-- Interactive vocabulary anagram game
-- Real-time word validation using AJAX
-- Randomized letter jumble generation
-- Tracks correctly identified vocabulary words
-- Flask backend with JSON responses
-- Automated unit tests for core functionality
+flask_vocab.py and the template vocab.html are a 'skeleton' version of the anagram game for a CIS 322 project. They uses conventional interaction through a form, interacting only when the user submits the form. 
 
----
+## Minijax? 
 
-## How It Works
+flask_minijax.py and templates/minijax.html are a tiny example of using JQuery with flask for an Ajax application. They should not be included in the version of the project you turn in. 
 
-1. A vocabulary list is loaded when the application starts.
-2. A randomized jumble of letters is generated from selected vocabulary words.
-3. Users type words that can be created from the jumble.
-4. AJAX requests validate each guess in real time.
-5. Correct words are added to the solved list until the puzzle is completed.
+# Tasks
 
----
+* Familiarize yourself with flask_vocab.py and flask_minijax.py by running them separately. You need to understand them to do this project.
 
-## Why I Built It
+* Your task is to replace the form interaction (in flask_vocab.py) with AJAX interaction on each keystroke using flask_minijax.py. 
 
-This project was developed to gain experience building interactive web applications using Flask and AJAX. It strengthened my understanding of asynchronous client-server communication, JSON APIs, session management, and backend application development while creating an engaging educational application.
+* You will write your own Dockerfile (see examples provided in prior projects). Dockerfile should be placed inside vocab folder.
 
----
+* You will submit your credentials.ini in canvas. It should have information on how we should get your git repo (which should contain your Dockerfile). 
 
-## Tech Stack
+## Grading Rubric
 
-### Backend
-- Python
-- Flask
+* If your code works as expected: 100 points. This includes:
+	* AJAX in the frontend (vocab.html) 
+	* Logic in the backend (flask_vocab.py)
+	* Frontend to backend interaction (with correct requests/responses) between vocab.html and flask_vocab.py
 
-### Frontend
-- HTML
-- CSS
-- JavaScript
-- AJAX (jQuery)
+* If the JQuery logic is not working, 30 points will be docked off. 
 
-### Testing
-- Nose
+* If the html file (replacing the original form interaction, i.e., replacing the button with JQuery code) is wrong or is missing in the appropriate location, 30 points will be docked off.
 
-### Tools
-- Docker
-- Git
+* If none of the functionalities work, 40 points will be given assuming 
+    * the credentials.ini is submitted with the correct URL of your repo, 
+    * the Dockerfile builds without any errors, and 
+    
+* If the Dockerfile doesn't build or is missing, 20 points will be docked off.
 
----
-
-## Installation
-
-```bash
-git clone https://github.com/YOUR_USERNAME/vocabulary-anagram-game.git
-```
-
-Install dependencies:
-
-```bash
-pip install -r requirements.txt
-```
-
-Run the application:
-
-```bash
-python flask_vocab.py
-```
-
----
-
-## Usage
-
-1. Open the application in your browser.
-2. Review the randomized letter jumble.
-3. Enter words created from the available letters.
-4. Continue discovering vocabulary words until the puzzle is complete.
-
----
-
-## Future Improvements
-
-- Multiple difficulty levels
-- User authentication and score tracking
-- Timer and leaderboard
-- Expanded vocabulary categories
-- Mobile-friendly interface
-- Accessibility improvements
+* If credentials.ini is missing, 0 will be assigned.
