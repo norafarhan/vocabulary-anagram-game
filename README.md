@@ -1,49 +1,88 @@
+# Vocabulary Anagram Game
 
-Vocabulary anagrams game for primary school English language learners (ELL)
+An interactive vocabulary game where users create words from a randomized set of letters. The application validates answers in real time using AJAX and Flask.
 
-## Overview
+---
 
-A simple anagram game designed for English-language learning students in elementary and middle school. Students are presented with a list of vocabulary words (taken from a text file) and an anagram. The anagram is a jumble of some number of vocabulary words, randomly chosen. Students attempt to type words that can be created from the jumble. When a matching word is typed, it is added to a list of solved words. 
+## Table of Contents
 
-The vocabulary word list is fixed for one invocation of the server, so multiple students connected to the same server will see the same vocabulary list but may  have different anagrams.
+- Features
+- How It Works
+- Why I Built It
+- Technology Used
+- Installation
+- Usage
+- Future Improvements
 
-## Authors 
+---
 
-Initial version by M Young; Docker version added by R Durairajan; to be revised by CIS 322 students. 
+## Features
 
-## Status
+- Randomized letter jumble
+- Real-time word validation
+- Interactive gameplay
+- Session tracking
+- Automated testing
 
-flask_vocab.py and the template vocab.html are a 'skeleton' version of the anagram game for a CIS 322 project. They uses conventional interaction through a form, interacting only when the user submits the form. 
+---
 
-## Minijax? 
+## How It Works
 
-flask_minijax.py and templates/minijax.html are a tiny example of using JQuery with flask for an Ajax application. They should not be included in the version of the project you turn in. 
+1. The application loads a vocabulary list.
+2. A random letter jumble is created.
+3. Users type words using the available letters.
+4. Correct words are added to the solved list.
+5. The game continues until all words are found.
 
-# Tasks
+---
 
-* Familiarize yourself with flask_vocab.py and flask_minijax.py by running them separately. You need to understand them to do this project.
+## Why I Built It
 
-* Your task is to replace the form interaction (in flask_vocab.py) with AJAX interaction on each keystroke using flask_minijax.py. 
+I built this project to gain experience with Flask, AJAX, and interactive web development while creating an educational application.
 
-* You will write your own Dockerfile (see examples provided in prior projects). Dockerfile should be placed inside vocab folder.
+---
 
-* You will submit your credentials.ini in canvas. It should have information on how we should get your git repo (which should contain your Dockerfile). 
+## Technology Used
 
-## Grading Rubric
+### Frontend
+- HTML
+- CSS
+- JavaScript
+- AJAX
 
-* If your code works as expected: 100 points. This includes:
-	* AJAX in the frontend (vocab.html) 
-	* Logic in the backend (flask_vocab.py)
-	* Frontend to backend interaction (with correct requests/responses) between vocab.html and flask_vocab.py
+### Backend
+- Python
+- Flask
 
-* If the JQuery logic is not working, 30 points will be docked off. 
+### Tools
+- Docker
+- Git
 
-* If the html file (replacing the original form interaction, i.e., replacing the button with JQuery code) is wrong or is missing in the appropriate location, 30 points will be docked off.
+---
 
-* If none of the functionalities work, 40 points will be given assuming 
-    * the credentials.ini is submitted with the correct URL of your repo, 
-    * the Dockerfile builds without any errors, and 
-    
-* If the Dockerfile doesn't build or is missing, 20 points will be docked off.
+## Installation
 
-* If credentials.ini is missing, 0 will be assigned.
+```bash
+git clone https://github.com/YOUR_USERNAME/vocabulary-anagram-game.git
+cd vocabulary-anagram-game
+python flask_vocab.py
+```
+
+---
+
+## Usage
+
+- Open the application.
+- Review the letter jumble.
+- Enter words using the available letters.
+- Continue until the puzzle is complete.
+
+---
+
+## Future Improvements
+
+- Multiple difficulty levels
+- Score tracking
+- Timer
+- Leaderboard
+- Larger vocabulary lists
